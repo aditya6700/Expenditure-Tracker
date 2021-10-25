@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* html {
+  font-size: 62.5%;
+} */
+
+body {
+  width: 100%;
+}
+
+.main_wrapper {
+  width: 100%;
+  height: 10vh;
+}
+
+.mains {
+  border: 2px solid green;
+}
+
+.cols {
+  border: 0.2rem dashed purple;
+}
+
+.rows {
+  border: 0.1rem solid darkblue;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/* main header  */
+.main_header_right {
+  height: 55rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.main_header_right p {
+  font-size: 2rem;
+}
+
+.main_header_right h2 {
+  margin: 1rem 0 4rem 0;
+  font-size: 4rem;
+  text-transform: capitalize;
+}
+
+.main_header_right button {
+  border: none;
+  padding: .8rem 1.8rem;
+  font-size: 1.4rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 8px 5px -5px #000;
+          box-shadow: 0 8px 5px -5px #000;
+  outline: none;
+}
+
+.main_header_right button:hover {
+  -webkit-box-shadow: 0 8px 5px -5px var(--main-color);
+          box-shadow: 0 8px 5px -5px var(--main-color);
+}
+
+.main_header_left {
+  height: 55rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.main_header_left figure img {
+  -webkit-filter: drop-shadow(0 4px 2px #534f4f);
+          filter: drop-shadow(0 4px 2px #534f4f);
+}
+/*# sourceMappingURL=style.css.map */

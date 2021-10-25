@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+    integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+    crossorigin="anonymous" />
+</head>
+<body>
+    <div class="container main_wrapper text-center">
+        <div class="row m-auto mt-3">
+
+            <div class="col-1 ">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Clients</a>
+                    <a href="#">Contact</a>
+                  </div>
+                  <span style="font-size:30px;cursor:pointer" onclick="openNav()">
+                    <i class="fas fa-bars"></i>
+                  </span>
+            </div>
+      
+            <div class="col-md-10 col-10 mx-auto header_title d-flex justify-content-center">
+                <h1 class="text-primay">Expense Tracker</h1>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container main_content">
+        <div class="row mains">
+            <!-- <div class="col-md-10 col-12 mx-auto"> -->
+                <!-- <div class="row rows"> -->
+                    <!-- left header -->
+                    <div class="col-md-5 col-12 cols main_header_left align-items-center">
+                        <figure>
+                            <img src="expense.png" alt="about" class="img-fluid" title="masteroot_weather">
+                        </figure>
+                    </div>
+                    <!-- right header -->
+                    <div class="col-md-7 col-12 cols main_header_right">
+                        <h2><span style="color:blue"> Expens</span></h2>
+                        <a href="/code"> <button> Get Code </button> </a>
+                    </div>
+                <!-- </div> -->
+            <!-- </div> -->
+        </div>
+    </div>
+
+
+
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+</body>
+</html>

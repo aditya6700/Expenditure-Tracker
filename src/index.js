@@ -1,12 +1,20 @@
+require('dotenv').config();
 const express = require('express');
 const route = require('./routes/routes');
 const path = require('path');
 const hbs = require('hbs');
 
+require('./db/conn');
+
 const port = process.env.PORT || 3000; // using available port
 const app = express();
 
-// setting path for css and templates
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));  // express 14.6+
+
+// app.use(express.urlencoded({extended: false}));  // express below v14.6
+
+// setting path for css and templates 
 const staticPath = path.join(__dirname, "../public");
 const partialsPath = path.join(__dirname,"../templates/partials");
 const viewsPath = path.join(__dirname, "../templates/views");
