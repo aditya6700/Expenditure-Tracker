@@ -3,12 +3,14 @@ const express = require('express');
 const route = require('./routes/routes');
 const path = require('path');
 const hbs = require('hbs');
+const cors = require('cors');
 
 require('./db/conn');
 
 const port = process.env.PORT || 3000; // using available port
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));  // express 14.6+
 
