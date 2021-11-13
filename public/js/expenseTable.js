@@ -1,5 +1,5 @@
 const getdata = document.getElementById('getData');
-const tableBody = document.getElementById('tableBody')
+const tableBody = document.getElementById('tableBody');
 
 const updateTable = (data) => {
     
@@ -26,7 +26,7 @@ const updateTable = (data) => {
                 </tr> `
     });
     tableBody.innerHTML = tableContent;
-}
+};
 
 const expenseList = async () => {
     try {

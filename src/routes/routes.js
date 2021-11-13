@@ -25,12 +25,39 @@ route.get('/expense', async (req, res) => {
     try {
 
         const expenseList = await Expenses.find();
-        console.log(expenseList);
+        // console.log(expenseList);
         res.status(200).send(expenseList);
 
    } catch (error) {
         res.status(404).render('error', error);
    }  
+});
+
+route.get('/statements', (req, res) => {
+    res.status(200).render('statement');
+});
+
+route.get('/query', async (req, res) => {
+    try {
+        
+        const { fromDate, toDate } = req.query;
+        // console.log(fromDate, toDate);
+        const fromDateObj = new Date(fromDate);
+        const toDateObj = new Date(toDate);
+
+        const resu = await Expenses.find({
+            date: {
+                    $gte: fromDateObj,
+                    $lt:  toDateObj
+            }
+        });
+        // console.log(resu)
+        
+        res.status(201).send(resu);
+
+    } catch (error) {
+        res.status(404).render('error', error);
+    }
 });
 
 route.get('*', (req, res) => {

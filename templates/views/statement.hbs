@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>links}}
+    <title>Statements  </title>
+</head>
+<body>
+    <h1>Statements</h1>
+        <div class="container">
+        <div class="row">
+         {{!-- <form class="row gy-2 gx-3 align-items-center" id="statementDate" action=""> --}}
+                <div class="col-auto">
+                    <label class="visually-hidden" for="fromDate">From</label>
+                    <input type="date" class="form-control" name="fromDate" id="fromDate" placeholder="from">
+                </div>
+
+                <div class="col-auto">
+                    <label class="visually-hidden" for="toDate">To</label>
+                    <input type="date" class="form-control" name="toDate" id="toDate" placeholder="to">
+                </div>
+
+                <div class="col-auto">
+                    <button type="submit" id="stat" class="btn btn-primary">Submit</button>
+                </div>
+            {{!-- </form> --}}
+        </div>
+        </div>
+    {{>expenseTable}}
+    {{>jqueryLinks}}
+    {{>footer}}
+    <script src="js/statement.js"></script>
+</body>
+</html>
