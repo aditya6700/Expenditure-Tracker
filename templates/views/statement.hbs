@@ -6,26 +6,20 @@
 </head>
 <body>
     <h1>Statements</h1>
-        <div class="container">
+    {{>report}}
         <div class="row">
-         {{!-- <form class="row gy-2 gx-3 align-items-center" id="statementDate" action=""> --}}
-                <div class="col-auto">
-                    <label class="visually-hidden" for="fromDate">From</label>
-                    <input type="date" class="form-control" name="fromDate" id="fromDate" placeholder="from">
+                <p>
+                <a class="btn btn-primary-outline" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    get detailed report
+                </a>
+                </p>
+                <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    {{>expenseTable}}
                 </div>
-
-                <div class="col-auto">
-                    <label class="visually-hidden" for="toDate">To</label>
-                    <input type="date" class="form-control" name="toDate" id="toDate" placeholder="to">
                 </div>
-
-                <div class="col-auto">
-                    <button type="submit" id="stat" class="btn btn-primary">Submit</button>
-                </div>
-            {{!-- </form> --}}
         </div>
-        </div>
-    {{>expenseTable}}
+  
     {{>jqueryLinks}}
     {{>footer}}
     <script src="js/statement.js"></script>
